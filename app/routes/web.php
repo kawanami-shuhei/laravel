@@ -26,8 +26,8 @@ Route::group(['middlemare' => 'auth'],function(){
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/myPost',[myPostController::class,'myPost'])->name('mypost');
     // Route::get('/editMyPost',[myPostController::class,'editMyPost'])->name('editmypost');
-    Route::get('/confirmNewPost',[PostController::class,'confirmNewPost'])->name('confirmNewPost');
-    Route::get('/completeNewPost',[PostController::class,'completeNewPost'])->name('completeNewPost');
+    Route::post('/confirmNewPost',[PostController::class,'confirmNewPost'])->name('confirmNewPost');
+    
 
     Route::resource('posts', 'PostController');
 });
