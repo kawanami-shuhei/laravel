@@ -22,7 +22,7 @@
                     <div>得意先</div>
                     <div style='width:100px'>{{ $post['client'] }}</div>
                     <div>導入商品</div>
-                    <div style='width:100px'>{{ $post['commodity'] }}</div>
+                    <div>{{ implode(',', $post['product_id']) }}</div>
                 </div>
                 <div class="mx-auto mb-5 d-flex">
                     <div>導入期間</div>
@@ -37,12 +37,12 @@
                 </div>
                 <div class="mx-auto mb-5">
                     <div>商談内容</div>
-                    <div class="form-control" rows="5">{{ $post['content'] }}</div>
+                    <div rows="5">{{ $post['content'] }}</div>
                 </div>
 
                 <div class="form-group mx-auto mb-5">
                     <div>導入の決め手</div>
-                    <div class="form-control" rows="5">{{ $post['factor'] }}</div>
+                    <div rows="5">{{ $post['factor'] }}</div>
                 </div>
                 <div class="mx-auto mb-5">
                     <div>画像の添付</div>
@@ -51,17 +51,19 @@
                 <form method="POST" action="{{route('posts.store') }}" enctype="multipart/form-data">
                 @csrf
                 <input type="hidden" name="title" value="{{ $post['title']}}">
-                <input type="hidden" name="name" value="{{ $post['name']}}">
-                <input type="hidden" name="department" value="{{ $post['department']}}">
+                <input type="hidden" name="name" value="{{ Auth::user()->name }}">
+                <input type="hidden" name="department" value="{{ Auth::user()->department}}">
                 <input type="hidden" name="client" value="{{ $post['client']}}">
-                <input type="hidden" name="commodity" value="{{ $post['commodity']}}">
+                <input type="hidden" name="product_id" value="{{ implode(',', $post['product_id']) }}">
                 <input type="hidden" name="start_date" value="{{ $post['start_date']}}">
                 <input type="hidden" name="end_date" value="{{ $post['end_date']}}">
                 <input type="hidden" name="content" value="{{ $post['content']}}">
                 <input type="hidden" name="factor" value="{{ $post['factor']}}">
                 <input type="hidden" name="image" value="{{ $image_name}}">
                 <button>登録する</button>
+                
                 </form>
+               <button type="back" onclick="history.back()" >戻る</button>
                 
                 
                 

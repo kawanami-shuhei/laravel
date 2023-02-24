@@ -14,10 +14,10 @@ class productsTableSeeder extends Seeder
     public function run()
     {
         DB::table('products')->insert([
-            'name'=>'sample',
-            'price'=>100,
-            'info'=>'sample',
-            'image'=>'sample',
+            'name'=>'sample2',
+            'price'=>200,
+            'info'=>'sample2',
+            'image'=>'sample2',
             'created_at'=>Carbon::now(),
             'updated_at'=>Carbon::now(),
         ]); 

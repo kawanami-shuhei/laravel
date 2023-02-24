@@ -18,7 +18,6 @@ class Posts extends Migration
             $table->string('title');
             $table->integer('user_id');
             $table->string('client');
-            $table->string('commodity');
             $table->date('start_date');
             $table->date('end_date')->nullable();
             $table->string('content');
