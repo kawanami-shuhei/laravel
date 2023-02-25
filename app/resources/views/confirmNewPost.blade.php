@@ -9,31 +9,33 @@
                 <div class="mx-auto mb-5 display-4">新規登録内容確認</div>
                 
                 <div class="mx-auto mb-5 display-5 d-flex">
-                    <div>タイトル</div>
+                    <div class="mr-2">タイトル</div>
                     <div style='width:400px'>{{ $post['title'] }}</div>
                 </div>
                 <div class="mx-auto mb-5 d-flex">
-                    <div>名前</div>
+                    <div class="mr-2">名前</div>
                     <div style='width:100px'>{{ Auth::user()->name }}</div>
-                    <div>部署名</div>
+                    <div class="mr-2">部署名</div>
                     <div style='width:100px'>{{ Auth::user()->department }}</div>
                 </div>
                 <div class="mx-auto mb-5 d-flex">
-                    <div>得意先</div>
+                    <div class="mr-2">得意先</div>
                     <div style='width:100px'>{{ $post['client'] }}</div>
-                    <div>導入商品</div>
-                    <div>{{ implode(',', $post['product_id']) }}</div>
+                    <div class="mr-2">導入商品</div>
+                    @foreach($product as $pro)
+                    <div>{{ $pro->name }}</div>
+                    @endforeach
                 </div>
                 <div class="mx-auto mb-5 d-flex">
-                    <div>導入期間</div>
+                    <div class="mr-2">売上金額</div>
+                    <div style='width:150px'>{{ $post['price'] }} 円  （期間見込）</div>
+                    <diV></div>
+                </div>
+                <div class="mx-auto mb-5 d-flex">
+                    <div class="mr-2">導入期間</div>
                     <div style='width:150px'>{{ $post['start_date'] }}</div>
                     <div>〜</div>
                     <div style='width:150px'>{{ $post['end_date'] }}</div>
-                </div>
-                <div class="mx-auto mb-5 d-flex">
-                    <div>売上金額</div>
-                    <div style='width:150px'></div>
-                    <diV>（期間見込）</div>
                 </div>
                 <div class="mx-auto mb-5">
                     <div>商談内容</div>

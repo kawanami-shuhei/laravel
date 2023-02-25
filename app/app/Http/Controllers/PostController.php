@@ -52,12 +52,13 @@ class PostController extends Controller
         // 取得したファイル名で保存
         $request->file('image')->storeAs('public/' . $dir, $file_name);
 
+        $product = Product::whereIn( 'id', $request->product_id )->get();
+        
         return view('confirmNewPost',[
             'post'=>$request->all(),
             'image_name'=>$file_name,
-        ]);
-
-        
+            'product'=>$product
+        ]);        
     }
     
 
@@ -69,7 +70,6 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
         $post = new Post;
         $post->user_id=Auth::id();
         $post->title=$request->title;

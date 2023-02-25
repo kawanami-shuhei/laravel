@@ -41,7 +41,7 @@ $('#search-form').on('click', function () {
                             <td class="col-xs-2">${title}</td>
                             <td class="col-xs-2">${department}</td>
                             <td class="col-xs-2">${client}</td>
-                            <td class="col-xs-5"><a class="btn btn-info" href="{{ route('posts.show', ['post'=>${id}]) }}">詳細</a></td>
+                            <td class="col-xs-5"><a class="btn btn-info" href="/posts/${id}">詳細</a></td>
                         </tr>
                             `
         })

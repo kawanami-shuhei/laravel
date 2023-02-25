@@ -28,7 +28,11 @@
                         </tr>
                         <tr>
                             <td style="width:100px">商品</td>
-                            <td></td>
+                            <td>
+                                @foreach($myPost->product as $product)
+                                <div>{{ $product->name }}</div>
+                                @endforeach
+                            </td>
                         </tr>
                         <tr>
                             <td style="width:100px">開始日</td>

@@ -15,7 +15,7 @@
                     </div>
                 @endif
                 <div class="mx-auto mb-5 display-3">mypage</div>
-                <div class="mx-auto mb-5 display-4">新規登録フォーム</div>
+                <div class="mx-auto mb-5 display-4">my事例編集</div>
                 <form method="POST" action="{{route('posts.update',['post'=>$post->id]) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
@@ -24,17 +24,19 @@
                     <input name="title" type="text" style='width:400px' value="{{ old('title',$post->title) }}">
                 </div>
                 <div class="mx-auto mb-5 d-flex">
-                    <div>名前</div>
+                    <div class="mr-2">名前</div>
                     <div>{{Auth::user()->name}}</div>
-                    <div>部署名</div>
+                    <div class="mr-2">部署名</div>
                     <div>{{ Auth::user()->department }}</div>
                 </div>
                 <div class="mx-auto mb-5 d-flex form-group">
-                    <div>得意先</div>
-                    <input name="client" type="text" style='width:100px' value="{{ old('client',$post->client) }}">
-                    
-                    
-                        <label for="product_id">導入商品</label>
+                    <div class="mr-2">得意先</div>
+                    <input name="client" type="text" style='width:100px' value="{{ old('client',$post->client) }}">    
+                </div>    
+                <div>
+                    <label for="product_id" class="mr-2">導入商品</label>
+                    <div class="d-flex mb-5">
+
                         <select name="product_id[]" multiple class="form-control" id="product_id">
                         @foreach($products as $product)
                             @if($post->product)
@@ -51,17 +53,19 @@
                         @endforeach
                         </select>
                         <input type="button" value="Exec" onclick="onButtonClick();" />
+                    </div>
+                </div>
                         
                     
-                </div>
+                
                 <div class="mx-auto mb-5 d-flex">
-                    <div>導入期間</div>
+                    <div class="mr-2">導入期間</div>
                     <input name="start_date" type="date" style='width:150px' value="{{ old('start_date',$post->start_date) }}">
                     <div>〜</div>
                     <input name="end_date" type="date" style='width:150px' value="{{ old('end_date',$post->end_date) }}">
                 </div>
                 <div class="mx-auto mb-5 d-flex">
-                    <div>売上金額　</div>
+                    <div class="mr-2">売上金額　</div>
                     <input id="output" name="price" type="number" style='width:150px' value="{{ $total }}">
                     <diV>　円　（期間見込）</div>
                 </div>

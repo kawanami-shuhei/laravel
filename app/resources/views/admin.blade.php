@@ -12,28 +12,29 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">管理者用ページ</div>
-                <div class="mx-auto">
-                    <div class="card">
-                        <div class="mx-auto mb-5 display-4">社員検索</div>      
-                    
-                        <div class="form-group mx-auto mb-5 display-5 d-flex">
-                            <label for="name">社員名</label>
-                            <input type="text" class="form-control" id="name" name="name">
-                        </div>    
-                        <div class="form-group mx-auto mb-5 display-5 d-flex">
-                            <label for="department">部署名</label>
-                            <input type="text" class="form-control" id="department" name="department">
-                        </div>
-                        <div class="form-group mx-auto mb-5 display-5 d-flex">
-                            <label for="number">社員番号</label>
-                            <input type="text" class="form-control" id="number" name="number">
-                        </div>
-                        <button type="button" class="btn btn-primary" id="search-user">検索</button>
-                    
+                <div class="mx-auto mb-5">
+                    <div class="mx-auto mb-5 display-4">社員検索</div>                 
+                    <div class="form-group mx-auto mb-5 display-5 d-flex">
+                        <label for="name" class="mr-3">社員名</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>    
+                    <div class="form-group mx-auto mb-5 display-5 d-flex">
+                        <label for="department" class="mr-3">部署名</label>
+                        <input type="text" class="form-control" id="department" name="department">
                     </div>
+                    <div class="form-group mx-auto mb-5 display-5 d-flex">
+                        <label for="number" class="mr-3">社員番号</label>
+                        <input type="text" class="form-control" id="number" name="number">
+                    </div>    
+                    <div class="mx-auto text-center">
+                        <button type="button" class="btn btn-primary" id="search-user">検索</button>
+                    </div>
+                </div>
+                <div>
                     <div class="search-wrapper col-12">
                         <div class="search-form">
-                            <table class="search-user-table">
+                            <div class="display-5 text-center mb-3">検索結果</div>
+                            <table class="search-user-table mx-auto" style="width:80%">
                                 <thead>
                                     <tr>
                                         <th>社員番号</th>
@@ -50,6 +51,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>

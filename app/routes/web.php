@@ -39,7 +39,7 @@ Route::group(['middlemare' => 'auth'],function(){
     
     
     Route::get('/myPost',[myPostController::class,'myPost'])->name('mypost');
-    Route::get('/post/show/{post}',[PostController::class,'show']);
+    // Route::get('/post/show/{post}',[PostController::class,'show']);
     Route::resource('posts', 'PostController');
 });
 
