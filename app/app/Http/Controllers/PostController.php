@@ -104,8 +104,10 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        $total = $post->product->sum('price');
         return view('postDetail',[
             'post'=>$post,
+            'total'=>$total
         ]);
     }
 
