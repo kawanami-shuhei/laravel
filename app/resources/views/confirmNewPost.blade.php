@@ -23,7 +23,7 @@
                     <div style='width:100px'>{{ $post['client'] }}</div>
                     <div class="mr-2">導入商品</div>
                     @foreach($product as $pro)
-                    <div>{{ $pro->name }}</div>
+                    <div>{{ $pro->name }}　</div>
                     @endforeach
                 </div>
                 <div class="mx-auto mb-5 d-flex">
@@ -62,10 +62,10 @@
                 <input type="hidden" name="content" value="{{ $post['content']}}">
                 <input type="hidden" name="factor" value="{{ $post['factor']}}">
                 <input type="hidden" name="image" value="{{ $image_name}}">
+                <button type="back" onclick="history.back()" class="mr-3">編集に戻る</button>
                 <button>登録する</button>
-                
                 </form>
-               <button type="back" onclick="history.back()" >戻る</button>
+               
                 
                 
                 

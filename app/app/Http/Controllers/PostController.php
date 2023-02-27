@@ -37,9 +37,10 @@ class PostController extends Controller
             'title' => ['required', 'max:255'],
             'client' => ['required', 'max:255'],
             'start_date' => ['required'],
+            'product_id' => ['required'],
+            'price' => ['required'],
             'content' => ['required', 'max:255'],
             'factor' => ['required', 'max:255'],
-            'price' => ['required'],
             'image' => ['required', 'max:1024','mimes:jpg,jpeg,png,gif'],
         ]);
 

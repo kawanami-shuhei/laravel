@@ -22,8 +22,9 @@
                     </div>
                 <!-- </form> -->
                     <div class="mx-auto">
-                        <button type="button" class="btn btn-primary" id="search-form">検索</button>
+                        <button type="button" class="btn btn-primary mb-5" id="search-form">検索</button>
                     </div>
+                    <div class="display-5 mx-auto mb-5">検索結果</div>
                 <div class="search-wrapper col-12">
                     <div class="search-form">
                        <table class="search-table mx-auto" style="width:80%">
