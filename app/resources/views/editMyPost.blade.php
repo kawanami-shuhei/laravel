@@ -25,9 +25,9 @@
                 </div>
                 <div class="mx-auto mb-5 d-flex">
                     <div class="mr-2">名前</div>
-                    <div>{{Auth::user()->name}}</div>
+                    <div style='width:100px'>{{Auth::user()->name}}</div>
                     <div class="mr-2">部署名</div>
-                    <div>{{ Auth::user()->department }}</div>
+                    <div style='width:100px'>{{ Auth::user()->department }}</div>
                 </div>
                 <div class="mx-auto mb-5 d-flex form-group">
                     <div class="mr-2">得意先</div>
